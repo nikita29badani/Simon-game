@@ -55,7 +55,7 @@ switch (colour) {
 $(".btn").on("click", function(){
     var userChosenColour= $(this).attr("id");
      userClickedPattern.push(userChosenColour);
-     makeSound(userChosenColour);
+    
     //console.log(userClickedPattern)
     animatePress(this);
     checkAnswer(userClickedPattern.length-1);
@@ -73,6 +73,7 @@ function animatePress(currentColour){
 
 function checkAnswer(index){
     if(userClickedPattern[index]===gamePattern[index]){
+        makeSound(userClickedPattern[index])
         if(userClickedPattern.length===gamePattern.length){
             setTimeout(function(){
                 nextSequence();

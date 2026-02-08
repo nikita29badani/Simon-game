@@ -1,23 +1,31 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   margin:  5%;
   color: #FEF2BF;
+  text-align: center;
 }
 
 .container {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0%;
   width: 50%;
   margin: auto;
 
 }
 
 .btn {
+  aspect-ratio: 1/1;
   margin: 25px;
   display: inline-block;
   height: 200px;
@@ -57,4 +65,13 @@ body {
   border-color: lightblue;
   border-width: 6px;
   border-radius: 20px;
+  height: 70%;
+  width: 20%;
 }
+
+@media (max-width: 480px) {
+  .container {
+    gap: 12px;
+  }
+}
+
