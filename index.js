@@ -9,7 +9,7 @@ $(document).on('keydown', function(){
     if(!started){
         started= true;
         $("#level-title").text("Level "+level);
-        
+        animatePress();
         nextSequence();
     
 }})
